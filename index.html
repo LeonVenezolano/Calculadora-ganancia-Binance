@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Arbitraje Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+    <h2>Calculadora de Arbitraje Pro</h2>
+    
+    <label>Tasa Banco (Bs): </label>
+    <input type="number" id="tasaBanco" placeholder="Ej: 611">
+    
+    <label>Tasa Binance (Bs): </label>
+    <input type="number" id="tasaBinance" placeholder="Ej: 735">
+
+    <label>Tipo de operación:</label>
+    <select id="tipoCalculo" onchange="actualizarPlaceholder()">
+        <option value="usdt">1. Cuántos USDT comprar</option>
+        <option value="bolivares">2. Cuántos Bolívares invertir</option>
+        <option value="dolares">3. Cuántos Dólares invertir</option>
+    </select>
+
+    <label id="labelValor">Cantidad:</label>
+    <input type="number" id="valorInput" placeholder="Ingrese el monto">
+    
+    <button onclick="calcularOperacion()">Calcular resultado</button>
+
+    <div id="resultadoFinal"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
